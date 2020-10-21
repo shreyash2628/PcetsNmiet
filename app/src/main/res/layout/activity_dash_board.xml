@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/drawer_side"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashBoardActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer=""
+    >
+
+    <!--    //toolbar-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#fff"/>
+    </RelativeLayout>
+
+<!--        toolbar ends-->
+
+
+
+<!--    container starts-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_above="@id/chip_navigation_bar"
+            android:id="@+id/fragment_container"
+            >
+
+
+<!--            container for fragments-->
+
+        </RelativeLayout>
+
+<!--        container ends-->
+
+
+
+<!--        //bottom navigation bar-->
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/chip_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cnb_menuResource="@menu/bottom_navigation_bar"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            app:cnb_unselectedColor="#000000"
+            app:cnb_radius="10dp"
+            app:cnb_iconSize="25dp"
+            app:cnb_orientationMode="horizontal"
+            app:cnb_textAppearance="@style/Theme.Design"
+
+            >
+        </com.ismaeldivita.chipnavigation.ChipNavigationBar>
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_side"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/side_main_menu"
+        android:layout_gravity="start"
+        android:layout_marginRight="50dp"
+        />
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

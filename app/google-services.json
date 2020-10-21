@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1005413943871",
+    "firebase_url": "https://pcets-nmiet.firebaseio.com",
+    "project_id": "pcets-nmiet",
+    "storage_bucket": "pcets-nmiet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005413943871:android:31f8b7c76a4ad89deb468a",
+        "android_client_info": {
+          "package_name": "com.example.pcetsnmiet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005413943871-ma0jt3p48dhmd5bsjhadteqeam81kv5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPzwBM9kswIjui6sYjyiAdGeaXemp1goU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005413943871-ma0jt3p48dhmd5bsjhadteqeam81kv5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

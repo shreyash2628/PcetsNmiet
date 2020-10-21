@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <group android:checkableBehavior="single"
+        >
+
+        <item
+            android:iconTint="#4E207F"
+            android:id="@+id/about_colg"
+            android:title="About College"
+            android:icon="@drawable/about_colg"
+            />
+
+        <item
+            android:iconTint="#4E207F"
+            android:id="@+id/website"
+            android:title="Website"
+            android:icon="@drawable/websites"/>
+
+        <item
+            android:iconTint="#4E207F"
+
+            android:id="@+id/report_issue"
+            android:title="Report an Issue"
+            android:icon="@drawable/report_issue_24"/>
+
+        <item
+            android:iconTint="#4E207F"
+
+            android:id="@+id/share"
+            android:title="Share"
+            android:icon="@drawable/shares"
+            />
+
+        <item
+            android:iconTint="#4E207F"
+
+            android:id="@+id/rate_us"
+            android:title="Rate Us"
+            android:icon="@drawable/ic_baseline_rate_review_24"
+            />
+
+        <item            android:iconTint="#4E207F"
+
+            android:id="@+id/log_out"
+            android:title="Log Out"
+            android:icon="@drawable/log_out"
+            />
+
+    </group>
+
+</menu>

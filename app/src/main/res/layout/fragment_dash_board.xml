@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.DashBoardFragment"
+    android:background="#FFFFFF">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+      >
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                app:contentScrim="@color/text_shadow_white"
+                android:background="#fff"
+                >
+
+                <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:iss_auto_cycle="true"
+                app:iss_period="2000"
+                app:iss_delay="2"
+                android:background="#BEC6C6"
+                    android:layout_margin="2dp"
+                    />
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:id="@+id/toolbar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat"
+                    android:background="#fff"/>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/check_card"
+                >
+
+<!--                horizontal recylerview-->
+
+
+
+
+
+
+
+
+
+
+
+                <!--  Grid Layout  !-->
+                <GridLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnOrderPreserved="false"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:rowCount="3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                    <!--  Schedule Card  !-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/schedule_cardview"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/schedule"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Schedule"
+                                android:textAlignment="center"
+                                android:textSize="25sp"
+                                android:gravity="center_horizontal" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!--  Team Card  !-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/team_cardview"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/group"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Team"
+                                android:textAlignment="center"
+                                android:textSize="25sp"
+                                android:gravity="center_horizontal" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!--  Apply Leave Card  !-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/apply_leave_cardview"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/leave"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Apply leave"
+                                android:textAlignment="center"
+                                android:textSize="25sp"
+                                android:gravity="center_horizontal" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!--  Attendance Card  !-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/attendance_cardview"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/attendance"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Attendance"
+                                android:textAlignment="center"
+                                android:textSize="25sp"
+                                android:gravity="center_horizontal" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!--  Poll Card  !-->
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/poll_cardview"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/poll"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Poll"
+                                android:textAlignment="center"
+                                android:textSize="25sp"
+                                android:gravity="center_horizontal" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <!--  My Profile Card  !-->
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/my_profile_cardview"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/pro"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="My Profile"
+                                android:textAlignment="center"
+                                android:textSize="25sp"
+                                android:gravity="center_horizontal" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+                </GridLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</RelativeLayout>
+
+
+<!--    />-->

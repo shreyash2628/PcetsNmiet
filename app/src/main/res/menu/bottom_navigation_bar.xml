@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/my_profile_bottom_navigation_bar"
+        android:title="My Profile"
+        android:icon="@drawable/my_profile_vector_asset"
+        app:cnb_backgroundColor="#FFEA00"
+        app:cnb_textColor="@color/black" />
+
+    <item
+        android:enabled="true"
+        android:id="@+id/dashboard_bottom_navigation_bar"
+        android:title="DashBoard"
+        app:cnb_backgroundColor="#FFEA00"
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        app:cnb_textColor="@color/black"
+        />
+
+
+    <item
+        app:cnb_backgroundColor="#FFEA00"
+        android:id="@+id/notification_bottom_navigation_bar"
+        android:title="Notifications"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        app:cnb_textColor="#000000"        />
+
+</menu>
