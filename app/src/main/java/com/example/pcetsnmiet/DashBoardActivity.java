@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -12,6 +13,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -20,11 +22,13 @@ import com.example.pcetsnmiet.Fragments.MyProfileFragment;
 import com.example.pcetsnmiet.Fragments.NotificationFragment;
 import com.example.pcetsnmiet.SideBarActivities.AboutCollege;
 import com.example.pcetsnmiet.SideBarActivities.ReportAnIssue;
+import com.example.pcetsnmiet.cardsActivity.ErpCardActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class DashBoardActivity extends AppCompatActivity {
 
+    CardView erp;
     DrawerLayout drawerLayout;
     NavigationView side_nav_view;
     Toolbar toolbar;
@@ -40,11 +44,29 @@ public class DashBoardActivity extends AppCompatActivity {
 
 
                 //hooks
-
+        erp = (CardView) findViewById(R.id.erp_card);
         drawerLayout = findViewById(R.id.drawer_side);
         side_nav_view = findViewById(R.id.navigation_side);
         toolbar = findViewById(R.id.toolbar);
         chipNavigationBar = findViewById(R.id.chip_navigation_bar);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         chipNavigationBar.setItemSelected(R.id.dashboard_bottom_navigation_bar,true);
@@ -80,6 +102,10 @@ public class DashBoardActivity extends AppCompatActivity {
                          String s="https://www.nmiet.edu.in/";
                          Uri uri = Uri.parse(s);
                         startActivity(new Intent(Intent.ACTION_VIEW,uri));
+                         break;
+
+                     case R.id.theme:
+
                          break;
 
                      case R.id.report_issue:
@@ -153,10 +179,6 @@ public class DashBoardActivity extends AppCompatActivity {
 
 
                         //..........................BOTTOM NAVIGATION BAR ENDS..........................//
-
-
-
-
 
 
 

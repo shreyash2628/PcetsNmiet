@@ -1,9 +1,317 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SideBarActivities.AboutCollege">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+        app:contentScrim="@color/text_shadow_white"
+        android:background="@color/white"
+        >
+
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toolbar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat"
+            android:background="@color/black">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="About College"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp"
+                    android:paddingVertical="5dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+<!--                <TextView-->
+<!--                    android:layout_marginTop="7dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/about_us"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_margin="15dp"-->
+
+<!--                    />-->
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VISION AND MISSION"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp">
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1.VISION"
+                            android:textSize="25sp"
+                            android:textColor="#000000"
+                            android:textStyle="normal"
+
+                            />
+
+                        <TextView
+                            android:layout_marginTop="7dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vision"
+                            android:textSize="18sp"
+
+                            />
+
+                        <TextView
+
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2.MISSION"
+                            android:textSize="25sp"
+                            android:textColor="#000000"
+                            android:textStyle="normal"
+
+                            />
+
+                        <TextView
+                            android:layout_marginTop="7dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                         android:text="@string/mission"
+                            android:textSize="18sp"
+                            />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="COURSES OFFERED"
+                                android:textSize="25sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/purple"
+                                android:layout_marginTop="20dp"
+                                android:textAlignment="center"
+                                />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/recylerview_courses_offered"
+
+                                    />
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Placement Cell"
+                                android:textAllCaps="true"
+                                android:textSize="25sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/purple"
+                                android:layout_marginTop="20dp"
+                                android:textAlignment="center"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                               android:text="@string/placement"
+                                android:textSize="18sp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Contact Details:-"
+                                android:textAllCaps="true"
+                                android:textSize="23sp"
+                                android:textStyle="bold"
+                                    android:textColor="@color/purple"
+                                android:textAlignment="textStart"/>
+
+                            <TextView
+                        android:layout_marginTop="5dp"
+                                android:textAllCaps="true"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Prof. Dr. Shitalkumar Rawandale"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textAllCaps="true"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Dean Industry Institute Interaction of PCET-NUTAN Group Colleges "/>
+
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textAllCaps="true"
+                                android:textSize="15sp"
+                                android:textStyle="italic"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mobile Number : 9422792663 / 9975490622"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textAllCaps="true"
+                                android:textSize="15sp"
+                                android:textStyle="italic"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Email ID : s.rawandale@gmail.com"/>
+
+
+
+                        </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:textAllCaps="true"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        />
+
+                    <ImageView
+                        android:layout_marginTop="-30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/map"
+                        android:id="@+id/map_view_img"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>

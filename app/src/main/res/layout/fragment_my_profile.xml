@@ -3,13 +3,241 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.MyProfileFragment"
-    android:background="#E4A2EF">
+    android:background="#FFFFFF">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:orientation="horizontal"
+            android:id="@+id/name_LL">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/profile"
+                app:civ_border_width="2dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="37dp"
+                app:civ_border_color="#3853EC"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="sans-serif-black"
+                    android:hint="Name"
+                    android:text="Shreyash Pawar"
+                    android:textAllCaps="true"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="TEIT"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="40dp"
+                    android:text="EDIT PROFILE"
+                    android:background="#3D5AFE"
+                    android:textColor="@color/white"
+
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@id/name_LL">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginLeft="35dp"
+
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:id="@+id/name"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidthFocused="1dp"
+                        android:orientation="horizontal"
+                        app:startIconDrawable="@drawable/my_profile_vector_asset"
+                        android:layout_marginRight="10dp"
+                        android:hint="Name"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:id="@+id/mobile_number"
+                        android:layout_below="@id/name"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidthFocused="1dp"
+                        android:orientation="horizontal"
+                        app:startIconDrawable="@drawable/call"
+                        android:layout_marginRight="10dp"
+                        android:hint="Mobile Number"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="phone"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:id="@+id/email"
+                        android:layout_below="@id/mobile_number"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidthFocused="1dp"
+                        android:orientation="horizontal"
+                        app:startIconDrawable="@drawable/ic_baseline_email_24"
+                        android:layout_marginRight="10dp"
+                        android:hint="Email Id"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="textEmailAddress"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:id="@+id/branch"
+                        android:layout_below="@id/email"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidthFocused="1dp"
+                        android:orientation="horizontal"
+                        app:startIconDrawable="@drawable/about_colg"
+                        android:layout_marginRight="10dp"
+                        android:hint="Year/Branch eg(TEIT)"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:id="@+id/id"
+                        android:layout_below="@id/branch"
+                        app:boxStrokeColor="@color/black"
+                        app:boxStrokeWidthFocused="1dp"
+                        android:orientation="horizontal"
+                        app:startIconDrawable="@drawable/id"
+                        android:layout_marginRight="10dp"
+                        android:hint="ID Number"
+
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
 
 </FrameLayout>

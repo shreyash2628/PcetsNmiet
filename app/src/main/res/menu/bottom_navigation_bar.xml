@@ -6,24 +6,24 @@
         android:id="@+id/my_profile_bottom_navigation_bar"
         android:title="My Profile"
         android:icon="@drawable/my_profile_vector_asset"
-        app:cnb_backgroundColor="#FFEA00"
-        app:cnb_textColor="@color/black" />
+        app:cnb_backgroundColor="#FDD835"
+        app:cnb_textColor="@color/white" />
 
     <item
         android:enabled="true"
         android:id="@+id/dashboard_bottom_navigation_bar"
         android:title="DashBoard"
-        app:cnb_backgroundColor="#FFEA00"
+        app:cnb_backgroundColor="#FDD835"
         android:icon="@drawable/ic_baseline_dashboard_24"
-        app:cnb_textColor="@color/black"
+        app:cnb_textColor="@color/white"
         />
 
 
     <item
-        app:cnb_backgroundColor="#FFEA00"
+        app:cnb_backgroundColor="#FDD835"
         android:id="@+id/notification_bottom_navigation_bar"
         android:title="Notifications"
         android:icon="@drawable/ic_baseline_notifications_24"
-        app:cnb_textColor="#000000"        />
+        app:cnb_textColor="@color/transparent"        />
 
 </menu>

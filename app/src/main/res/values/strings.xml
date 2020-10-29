@@ -8,6 +8,16 @@
     <string name="password">Password</string>
     <string name="open_drawer">Open</string>
     <string name="close_drawer">Close</string>
+
+    <string name="about_us">NMIET was established in the year 2008. The institute is recognized by All India Council for Technical Education (AICTE) New Delhi and Directorate of Technical Education (DTE) Government of Maharashtra. It is affiliated to Savitribai Phule Pune University (SPPU), Pune. The institute runs four undergraduate courses. Undergraduate courses include Computer Engineering, Information Technology, Mechanical Engineering, Electronics and Telecommunication Engineering.</string>
+
+    <string name="vision">We envision being dynamic-leading institute of ‘practice engineering and industrial research’ in the learning system that promotes learners towards development of ‘self-esteem, self-learning and creativity and innovation’ leading to development of successful professionals and members of society"
+</string>
+
+    <string name="mission">The Mission of the Institute is - “To educate and train the students on skill development and engineering education having Holistic development and global competencies required for employment/self-employment by imbibing a unique value system in the excellent academics and physical environment. Our mandate is to generate, preserve and share knowledge for developing a responsive individuals and professionals.”</string>
+
+    <string name="placement">We, at NMIET try to connect with as many companies as possible for placement of students. We enjoy the advantage of getting cream layer of students at our institutes. Our Alumni are also performing well in the industries where they are placed. Hence we could get the recognition from industries. We believe that the backbone of our T&amp;P Cell is our student volunteers of T&amp;P Cell who work very hard with full enthusiasm to conduct the recruitment drives smoothly. All these volunteers develop their management skills, interpersonal skills and above all Leadership skills. All such student volunteers become Managers/ Project leaders earlier in their career as compared to their other counterpartsbecause of these skills. We would like to assure Industry, Studentsand Parents that we will not leave any stone unturned to make all our stakeholders Happy and Proud.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>

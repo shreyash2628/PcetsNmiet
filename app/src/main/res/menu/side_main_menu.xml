@@ -19,6 +19,12 @@
 
         <item
             android:iconTint="#4E207F"
+            android:id="@+id/theme"
+            android:title="Theme"
+            android:icon="@drawable/theme"/>
+
+        <item
+            android:iconTint="#4E207F"
 
             android:id="@+id/report_issue"
             android:title="Report an Issue"

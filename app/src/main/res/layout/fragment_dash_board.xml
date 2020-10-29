@@ -35,7 +35,7 @@
                 app:iss_auto_cycle="true"
                 app:iss_period="2000"
                 app:iss_delay="2"
-                android:background="#BEC6C6"
+                android:background="#fff"
                     android:layout_margin="2dp"
                     />
 
@@ -93,6 +93,43 @@
 
                     <!--  Schedule Card  !-->
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/erp_card"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="110dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/erponline"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ERP"
+                                android:textAlignment="center"
+                                android:textSize="25sp"
+                                android:layout_marginTop="-10dp"
+                                android:gravity="center_horizontal" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!--  Team Card  !-->
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/schedule_cardview"
                         android:layout_width="120dp"
                         android:layout_height="170dp"
@@ -108,11 +145,11 @@
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="1dp">
 
                             <ImageView
                                 android:layout_width="60dp"
-                                android:layout_height="60dp"
+                                android:layout_height="80dp"
                                 android:src="@drawable/schedule"/>
 
                             <TextView
@@ -121,43 +158,8 @@
                                 android:text="Schedule"
                                 android:textAlignment="center"
                                 android:textSize="25sp"
-                                android:gravity="center_horizontal" />
-
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!--  Team Card  !-->
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/team_cardview"
-                        android:layout_width="120dp"
-                        android:layout_height="170dp"
-                        android:layout_columnWeight="1"
-                        android:layout_rowWeight="1"
-                        android:layout_margin="10dp"
-                        android:elevation="6dp"
-                        app:cardCornerRadius="10dp"
-                        >
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-
-                            <ImageView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:src="@drawable/group"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Team"
-                                android:textAlignment="center"
-                                android:textSize="25sp"
-                                android:gravity="center_horizontal" />
+                                android:gravity="center_horizontal"
+                               />
 
 
                         </LinearLayout>
@@ -261,7 +263,7 @@
                             <ImageView
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:src="@drawable/poll"/>
+                                android:src="@drawable/mech"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -300,7 +302,7 @@
                             <ImageView
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:src="@drawable/pro"/>
+                                android:src="@drawable/it"/>
 
                             <TextView
                                 android:layout_width="wrap_content"

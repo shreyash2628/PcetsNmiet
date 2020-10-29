@@ -1,8 +1,10 @@
 package com.example.pcetsnmiet.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -13,7 +15,9 @@ import android.widget.Toast;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.pcetsnmiet.DashBoardActivity;
 import com.example.pcetsnmiet.R;
+import com.example.pcetsnmiet.cardsActivity.ErpCardActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -25,12 +29,41 @@ import java.util.List;
 
 public class DashBoardFragment extends Fragment {
 
+    CardView erp;
     ImageSlider imageSlider;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dash_board, container, false);
+
         imageSlider = (ImageSlider) view.findViewById(R.id.image_slider);
+        erp = view.findViewById(R.id.erp_card);
+
+
+
+
+        //................................CARDS OPERATION STARTS...........................//
+
+
+
+        erp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_erp = new Intent(getActivity(), ErpCardActivity.class);
+                startActivity(intent_erp);
+            }
+        });
+
+
+
+        //................................CARDS OPERATION ENDS...........................//
+
+
+
+
+
+
+
 
         final List<SlideModel> remoteimages = new ArrayList<>();
 

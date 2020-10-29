@@ -8,7 +8,7 @@ android:id="@+id/drawer_side"
     android:layout_height="match_parent"
     tools:context=".DashBoardActivity"
     android:fitsSystemWindows="true"
-    tools:openDrawer=""
+    tools:openDrawer="start"
     >
 
     <!--    //toolbar-->
@@ -59,12 +59,11 @@ android:id="@+id/drawer_side"
             android:layout_height="wrap_content"
             app:cnb_menuResource="@menu/bottom_navigation_bar"
             android:layout_alignParentBottom="true"
-            android:background="#fff"
-            app:cnb_unselectedColor="#000000"
+            android:background="#050505"
+            app:cnb_unselectedColor="@color/white"
             app:cnb_radius="10dp"
             app:cnb_iconSize="25dp"
             app:cnb_orientationMode="horizontal"
-            app:cnb_textAppearance="@style/Theme.Design"
 
             >
         </com.ismaeldivita.chipnavigation.ChipNavigationBar>
