@@ -7,4 +7,5 @@
     <color name="white">#fff</color>
     <color name="purple">#4E207F</color>
     <color name="transparent">#00000000</color>
+    <color name="quiz_green">#45BD4B</color>
 </resources>

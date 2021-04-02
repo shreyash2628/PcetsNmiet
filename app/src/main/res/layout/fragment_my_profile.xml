@@ -23,11 +23,11 @@
                 android:id="@+id/profile_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/profile"
-                app:civ_border_width="2dp"
+                android:src="@drawable/profile_logo_"
+                app:civ_border_width="3dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="37dp"
-                app:civ_border_color="#3853EC"
+                app:civ_border_color="#F18888"
                 />
 
             <LinearLayout
@@ -64,7 +64,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="40dp"
                     android:text="EDIT PROFILE"
-                    android:background="#3D5AFE"
+                    android:background="#2F4BF6"
                     android:textColor="@color/white"
 
                     />
@@ -91,123 +91,180 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="35dp"
                     android:layout_marginLeft="35dp"
-
-
                     >
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_marginBottom="10dp"
+
+
+                    <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="65dp"
-                        android:id="@+id/name"
-                        app:boxStrokeColor="@color/black"
-                        app:boxStrokeWidthFocused="1dp"
-                        android:orientation="horizontal"
-                        app:startIconDrawable="@drawable/my_profile_vector_asset"
-                        android:layout_marginRight="10dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/names"
                         android:hint="Name"
-
-                        >
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:inputType="text"
-
-                            />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
+                        android:text="name"
+                        android:background="@color/white"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        />
+
+
+                    <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="65dp"
-                        android:id="@+id/mobile_number"
-                        android:layout_below="@id/name"
-                        app:boxStrokeColor="@color/black"
-                        app:boxStrokeWidthFocused="1dp"
-                        android:orientation="horizontal"
-                        app:startIconDrawable="@drawable/call"
-                        android:layout_marginRight="10dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/mob_no"
+                        android:background="@color/white"
                         android:hint="Mobile Number"
-
-                        >
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:inputType="phone"
-
-                            />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/names"/>
+
+
+                    <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="65dp"
+                        android:layout_height="50dp"
                         android:id="@+id/email"
-                        android:layout_below="@id/mobile_number"
-                        app:boxStrokeColor="@color/black"
-                        app:boxStrokeWidthFocused="1dp"
-                        android:orientation="horizontal"
-                        app:startIconDrawable="@drawable/ic_baseline_email_24"
-                        android:layout_marginRight="10dp"
-                        android:hint="Email Id"
-
-                        >
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:inputType="textEmailAddress"
-
-                            />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Email"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:layout_below="@id/mob_no"
+
+                        />
+
+
+                    <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="65dp"
-                        android:id="@+id/branch"
+                        android:layout_height="50dp"
+                        android:id="@+id/year"
+                        android:hint="YEAR/BRANCH"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
                         android:layout_below="@id/email"
-                        app:boxStrokeColor="@color/black"
-                        app:boxStrokeWidthFocused="1dp"
-                        android:orientation="horizontal"
-                        app:startIconDrawable="@drawable/about_colg"
-                        android:layout_marginRight="10dp"
-                        android:hint="Year/Branch eg(TEIT)"
+                        android:background="@color/white"/>
 
-                        >
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:inputType="text"
-
-                            />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_marginBottom="10dp"
+                    <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="65dp"
-                        android:id="@+id/id"
-                        android:layout_below="@id/branch"
-                        app:boxStrokeColor="@color/black"
-                        app:boxStrokeWidthFocused="1dp"
-                        android:orientation="horizontal"
-                        app:startIconDrawable="@drawable/id"
-                        android:layout_marginRight="10dp"
-                        android:hint="ID Number"
+                        android:layout_height="50dp"
+                        android:id="@+id/idNO"
+                        android:hint="ID NUMBER"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/year"
+                        android:background="@color/white"/>
 
-                        >
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:inputType="number"
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="65dp"-->
+<!--                        android:id="@+id/name"-->
+<!--                        app:boxStrokeColor="@color/black"-->
+<!--                        app:boxStrokeWidthFocused="1dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:startIconDrawable="@drawable/my_profile_vector_asset"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:hint="Name"-->
 
-                            />
-                    </com.google.android.material.textfield.TextInputLayout>
+<!--                        >-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:inputType="text"-->
+
+<!--                            />-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="65dp"-->
+<!--                        android:id="@+id/mobile_number"-->
+<!--                        android:layout_below="@id/name"-->
+<!--                        app:boxStrokeColor="@color/black"-->
+<!--                        app:boxStrokeWidthFocused="1dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:startIconDrawable="@drawable/call"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:hint="Mobile Number"-->
+
+<!--                        >-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:inputType="phone"-->
+
+<!--                            />-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="65dp"-->
+<!--                        android:id="@+id/email"-->
+<!--                        android:layout_below="@id/mobile_number"-->
+<!--                        app:boxStrokeColor="@color/black"-->
+<!--                        app:boxStrokeWidthFocused="1dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:startIconDrawable="@drawable/ic_baseline_email_24"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:hint="Email Id"-->
+
+<!--                        >-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:inputType="textEmailAddress"-->
+
+<!--                            />-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="65dp"-->
+<!--                        android:id="@+id/branch"-->
+<!--                        android:layout_below="@id/email"-->
+<!--                        app:boxStrokeColor="@color/black"-->
+<!--                        app:boxStrokeWidthFocused="1dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:startIconDrawable="@drawable/about_colg"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:hint="Year/Branch eg(TEIT)"-->
+
+<!--                        >-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:inputType="text"-->
+
+<!--                            />-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="65dp"-->
+<!--                        android:id="@+id/id"-->
+<!--                        android:layout_below="@id/branch"-->
+<!--                        app:boxStrokeColor="@color/black"-->
+<!--                        app:boxStrokeWidthFocused="1dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:startIconDrawable="@drawable/id"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:hint="ID Number"-->
+
+<!--                        >-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:inputType="number"-->
+
+<!--                            />-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
 
 
 

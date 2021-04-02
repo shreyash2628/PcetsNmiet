@@ -155,7 +155,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Schedule"
+                                android:text="Attendance"
                                 android:textAlignment="center"
                                 android:textSize="25sp"
                                 android:gravity="center_horizontal"
@@ -229,7 +229,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Attendance"
+                                android:text="Time Table"
                                 android:textAlignment="center"
                                 android:textSize="25sp"
                                 android:gravity="center_horizontal" />
@@ -239,7 +239,7 @@
                     </androidx.cardview.widget.CardView>
 
 
-                    <!--  Poll Card  !-->
+                    <!--   Card  !-->
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/poll_cardview"
@@ -263,12 +263,13 @@
                             <ImageView
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:src="@drawable/mech"/>
+                                android:src="@drawable/ebook"/>
 
                             <TextView
+                                android:layout_marginTop="5dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Poll"
+                                android:text="EBooks"
                                 android:textAlignment="center"
                                 android:textSize="25sp"
                                 android:gravity="center_horizontal" />
@@ -282,7 +283,7 @@
                     <!--  My Profile Card  !-->
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/my_profile_cardview"
+                        android:id="@+id/faculty_cardview"
                         android:layout_width="120dp"
                         android:layout_height="170dp"
                         android:layout_columnWeight="1"
@@ -307,7 +308,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="My Profile"
+                                    android:text="FACULTY"
                                 android:textAlignment="center"
                                 android:textSize="25sp"
                                 android:gravity="center_horizontal" />
@@ -317,6 +318,81 @@
                     </androidx.cardview.widget.CardView>
 
 
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pyq_cards"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ebook"/>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PYQ"
+                                android:textAlignment="center"
+                                android:textSize="25sp"
+                                android:gravity="center_horizontal" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <!--  My Profile Card  !-->
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/quiz_card"
+                        android:layout_width="120dp"
+                        android:layout_height="170dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_margin="10dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/quiz"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Quiz"
+                                android:textAlignment="center"
+                                android:textSize="25sp"
+                                android:gravity="center_horizontal" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
 
 

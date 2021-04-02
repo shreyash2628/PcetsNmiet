@@ -87,6 +87,7 @@
 
 
                 <TextView
+                    android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="VISION AND MISSION"
@@ -153,7 +154,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="200dp"
+                            android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:layout_marginTop="10dp">
 
@@ -161,16 +162,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <androidx.recyclerview.widget.RecyclerView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/recylerview_courses_offered"
-
-                                    />
+                              <androidx.recyclerview.widget.RecyclerView
+                                  android:id="@+id/recycler_view_abcolg"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="match_parent"/>
                             </androidx.cardview.widget.CardView>
 
 
                         </LinearLayout>
+
+
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -193,7 +194,7 @@
                                 android:layout_marginTop="7dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                               android:text="@string/placement"
+                                android:text="@string/placement"
                                 android:textSize="18sp"
                                 />
 
@@ -205,11 +206,11 @@
                                 android:textAllCaps="true"
                                 android:textSize="23sp"
                                 android:textStyle="bold"
-                                    android:textColor="@color/purple"
+                                android:textColor="@color/purple"
                                 android:textAlignment="textStart"/>
 
                             <TextView
-                        android:layout_marginTop="5dp"
+                                android:layout_marginTop="5dp"
                                 android:textAllCaps="true"
                                 android:textSize="15sp"
                                 android:textStyle="bold"
@@ -254,6 +255,9 @@
                         </LinearLayout>
 
 
+
+
+                        https://www.behance.net/gallery/106993021/College-Maagement-App
 
 
 

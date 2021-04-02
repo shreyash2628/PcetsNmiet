@@ -13,12 +13,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.pcetsnmiet.HelperClass.userHelperClass;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.concurrent.TimeUnit;
 
@@ -37,6 +40,9 @@ public class SignUp extends AppCompatActivity {
 
         //hooks
         mAuth = FirebaseAuth.getInstance();
+        FirebaseDatabase root = FirebaseDatabase.getInstance();
+        final DatabaseReference users = root.getReference("Users");
+
 
         nameET = findViewById(R.id.name);
         emailET = findViewById(R.id.email);
@@ -59,35 +65,41 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(!validateName() || !validateMobNo() || !validateEmail() || !validatePassWord())
-                {
-                        return;
-                }
-                else{
+//                if(!validateName() || !validateMobNo() || !validateEmail() || !validatePassWord())
+//                {
+//                        return;
+//                }
+              //  else{
 
-                    String phoneNumberEntered = mobnoET.getEditText().getText().toString();
-                    String name = nameET.getEditText().getText().toString();
-                    String email = emailET.getEditText().getText().toString();
-                    String password = passwordET.getEditText().getText().toString();
+                String name = nameET.getEditText().getText().toString();
+                String phoneNumberEntered = mobnoET.getEditText().getText().toString();
+                String email = emailET.getEditText().getText().toString();
+                String password = passwordET.getEditText().getText().toString();
 
 
+                userHelperClass userHelperClass = new userHelperClass(name,phoneNumberEntered,email,password);
+
+                users.child(phoneNumberEntered).setValue(userHelperClass);
+
+                Intent intent = new Intent(SignUp.this,DashBoardActivity.class);
+                startActivity(intent);
                     //sendVFCode(phoneNumberEntered);
 
+//
+//                    Intent intent = new Intent(SignUp.this,OTPActivity.class);
+//
+//                    intent.putExtra("Entered_Phone_No",phoneNumberEntered);
+//                    intent.putExtra("Entered_Name",name);
+//                    intent.putExtra("Entered_Email",email);
+//                    intent.putExtra("Entered_Password",password);
+//                    startActivity(intent);
 
-                    Intent intent = new Intent(SignUp.this,OTPActivity.class);
 
-                    intent.putExtra("Entered_Phone_No",phoneNumberEntered);
-                    intent.putExtra("Entered_Name",name);
-                    intent.putExtra("Entered_Email",email);
-                    intent.putExtra("Entered_Password",password);
-                    startActivity(intent);
-
-
-                    finish();
+                   // finish();
                 }
 
 
-            }
+            //}
         });
 
 
@@ -105,88 +117,88 @@ public class SignUp extends AppCompatActivity {
 
 
 
-    private boolean validateName() {
-        String name ;
-        name = nameET.getEditText().getText().toString();
-
-        if(name.length()<8)
-        {
-            nameET.setError("Password is too short");
-            return  false;
-        }else if(name.isEmpty())
-        {
-            nameET.setError("This field can not be empty");
-            return false;
-        }else {
-            nameET.setError(null);
-            nameET.setErrorEnabled(false);
-            return true;
-        }
-    }
-
-
-    private boolean validateMobNo() {
-        String mob;
-        mob = mobnoET.getEditText().getText().toString();
-
-        if(mob.length()<10)
-        {
-            mobnoET.setError("Invalid Mobile Number");
-            return  false;
-        }else if(mob.isEmpty())
-        {
-            mobnoET.setError("This field can not be empty");
-            return false;
-        }else {
-            mobnoET.setError(null);
-            mobnoET.setErrorEnabled(false);
-
-            return true;
-        }
-    }
-
-
-
-    private boolean validateEmail() {
-        String email ;
-        email = emailET.getEditText().getText().toString();
-
-        if(email.isEmpty())
-        {
-            emailET.setError("This field can not be empty");
-            return false;
-        }else {
-            emailET.setError(null);
-            emailET.setErrorEnabled(false);
-
-            return true;
-        }
-    }
-
-
-
-    private boolean validatePassWord() {
-        String password ;
-        password = passwordET.getEditText().getText().toString();
-
-        if(password.length()<8)
-        {
-            passwordET.setError("Password is too short");
-            return  false;
-        }else if(password.isEmpty())
-        {
-            passwordET.setError("This field can not be empty");
-            return false;
-        }else {
-            passwordET.setError(null);
-            passwordET.setErrorEnabled(false);
-
-            return true;
-        }
-    }
-
-
-
+//    private boolean validateName() {
+//        String name ;
+//        name = nameET.getEditText().getText().toString();
+//
+//        if(name.length()<8)
+//        {
+//            nameET.setError("Password is too short");
+//            return  false;
+//        }else if(name.isEmpty())
+//        {
+//            nameET.setError("This field can not be empty");
+//            return false;
+//        }else {
+//            nameET.setError(null);
+//            nameET.setErrorEnabled(false);
+//            return true;
+//        }
+//    }
+//
+//
+//    private boolean validateMobNo() {
+//        String mob;
+//        mob = mobnoET.getEditText().getText().toString();
+//
+//        if(mob.length()<10)
+//        {
+//            mobnoET.setError("Invalid Mobile Number");
+//            return  false;
+//        }else if(mob.isEmpty())
+//        {
+//            mobnoET.setError("This field can not be empty");
+//            return false;
+//        }else {
+//            mobnoET.setError(null);
+//            mobnoET.setErrorEnabled(false);
+//
+//            return true;
+//        }
+//    }
+//
+//
+//
+//    private boolean validateEmail() {
+//        String email ;
+//        email = emailET.getEditText().getText().toString();
+//
+//        if(email.isEmpty())
+//        {
+//            emailET.setError("This field can not be empty");
+//            return false;
+//        }else {
+//            emailET.setError(null);
+//            emailET.setErrorEnabled(false);
+//
+//            return true;
+//        }
+//    }
+//
+//
+//
+//    private boolean validatePassWord() {
+//        String password ;
+//        password = passwordET.getEditText().getText().toString();
+//
+//        if(password.length()<8)
+//        {
+//            passwordET.setError("Password is too short");
+//            return  false;
+//        }else if(password.isEmpty())
+//        {
+//            passwordET.setError("This field can not be empty");
+//            return false;
+//        }else {
+//            passwordET.setError(null);
+//            passwordET.setErrorEnabled(false);
+//
+//            return true;
+//        }
+//    }
+//
+//
+//
 
 
 

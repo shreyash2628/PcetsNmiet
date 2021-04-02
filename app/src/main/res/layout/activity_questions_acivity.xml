@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuizCard.QuestionsAcivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+      >
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="QUESTIONS"
+                android:textColor="@color/quiz_green"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/black"
+            >
+            <TextView
+                android:id="@+id/questions_textview"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/questions_tv"
+                android:padding="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:text="Questions"/>
+
+            <TextView
+                android:id="@+id/no_of_que_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1/10"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:layout_margin="10dp"/>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:backgroundTint="#F6F5F5"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_baseline_bookmark_border_24"
+                />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/options_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/option_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_corners"
+            android:text="Option A"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/option_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+
+            android:background="@drawable/rounded_corners"
+            android:text="Option B"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/option_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_corners"
+            android:text="Option C"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/option_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_corners"
+            android:text="Option D"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="horizontal"
+       >
+
+       <Button
+           android:id="@+id/next_button"
+           android:layout_width="120dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="start"
+           android:text="next"
+           android:textColor="@color/white"
+           android:textSize="25sp"
+           android:layout_alignParentRight="true"
+           android:layout_margin="25dp"
+           android:background="@color/quiz_green"
+
+           />
+
+       <Button
+           android:textSize="25sp"
+           android:layout_alignParentLeft="true"
+           android:id="@+id/share_button"
+           android:layout_width="120dp"
+           android:layout_height="wrap_content"
+           android:text="Share"
+           android:textColor="@color/white"
+           android:background="#5E35B1"
+           android:layout_margin="25dp"/>
+
+
+
+
+
+
+   </RelativeLayout>
+
+</LinearLayout>

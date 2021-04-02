@@ -15,7 +15,7 @@
             android:iconTint="#4E207F"
             android:id="@+id/website"
             android:title="Website"
-            android:icon="@drawable/websites"/>
+            android:icon="@drawable/ic_logout"/>
 
         <item
             android:iconTint="#4E207F"

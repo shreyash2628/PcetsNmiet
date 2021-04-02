@@ -13,7 +13,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -21,8 +20,8 @@ import com.example.pcetsnmiet.Fragments.DashBoardFragment;
 import com.example.pcetsnmiet.Fragments.MyProfileFragment;
 import com.example.pcetsnmiet.Fragments.NotificationFragment;
 import com.example.pcetsnmiet.SideBarActivities.AboutCollege;
+import com.example.pcetsnmiet.cardsActivity.Faculty;
 import com.example.pcetsnmiet.SideBarActivities.ReportAnIssue;
-import com.example.pcetsnmiet.cardsActivity.ErpCardActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
@@ -50,13 +49,14 @@ public class DashBoardActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         chipNavigationBar = findViewById(R.id.chip_navigation_bar);
 
-
-
-
-
-
-
-
+//
+//
+//        if(FirebaseAuth.getInstance().getCurrentUser() == null)
+//        {
+//            Intent intent = new Intent(DashBoardActivity.this,LoginActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
 
 
 
@@ -123,8 +123,9 @@ public class DashBoardActivity extends AppCompatActivity {
                          break;
 
                      case R.id.log_out:
-                         Toast.makeText(DashBoardActivity.this, "Fifth Selected", Toast.LENGTH_SHORT).show();
-                         break;
+                            Intent intent = new Intent(DashBoardActivity.this, Faculty.class);
+                            startActivity(intent);
+                             break;
 
 
 

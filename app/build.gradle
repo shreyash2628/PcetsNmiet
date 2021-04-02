@@ -26,7 +26,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation 'com.google.firebase:firebase-analytics:18.0.0'
@@ -35,6 +35,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:22.0.0'
     implementation 'com.google.android.gms:play-services-auth:18.1.0'
     implementation 'com.google.firebase:firebase-auth:20.0.0'
+    implementation files('recyclerview')
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
@@ -57,6 +59,5 @@ dependencies {
 
     //slider dependency
     implementation 'com.github.denzcoskun:ImageSlideshow:0.0.7'
-//    compileOnly 'com.google.android.wearable:wearable:2.6.0'
 
 }

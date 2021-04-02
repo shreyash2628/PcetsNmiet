@@ -15,8 +15,9 @@ import android.widget.Toast;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
-import com.example.pcetsnmiet.DashBoardActivity;
+import com.example.pcetsnmiet.QuizCard.QuestionsAcivity;
 import com.example.pcetsnmiet.R;
+import com.example.pcetsnmiet.cardsActivity.Faculty;
 import com.example.pcetsnmiet.cardsActivity.ErpCardActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,7 +30,7 @@ import java.util.List;
 
 public class DashBoardFragment extends Fragment {
 
-    CardView erp;
+    CardView erp,faculty,quiz;
     ImageSlider imageSlider;
 
     @Override
@@ -38,19 +39,37 @@ public class DashBoardFragment extends Fragment {
 
         imageSlider = (ImageSlider) view.findViewById(R.id.image_slider);
         erp = view.findViewById(R.id.erp_card);
+        quiz = view.findViewById(R.id.quiz_card);
+
+        faculty = view.findViewById(R.id.faculty_cardview);
+
 
 
 
 
         //................................CARDS OPERATION STARTS...........................//
 
-
+        quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent quiz_intent = new Intent(getActivity(), QuestionsAcivity.class);
+                startActivity(quiz_intent);
+            }
+        });
 
         erp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent_erp = new Intent(getActivity(), ErpCardActivity.class);
                 startActivity(intent_erp);
+            }
+        });
+
+        faculty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Faculty.class);
+                startActivity(intent);
             }
         });
 
